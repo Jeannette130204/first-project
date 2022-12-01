@@ -10,12 +10,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: fit-content;
     
 }
 
 h1{
-    text-align: center;
-    margin: 0 0 0 700px;
+    text-align: right;
+    margin: 0 100px 0 0;
     color:white;
     font-size: 80px;
 }
@@ -31,8 +32,8 @@ h1{
 .coins{
     text-align: right;
     margin: 75px 0 0 0;
-    padding: 0 200px 0 0;
-    font-size: 20px;
+    padding: 0 50px 0 0;
+    font-size: 25px;
     color: gold;
 }
 .slot-containers{
@@ -41,7 +42,7 @@ h1{
     /* justify-content: space-around; */
     margin: 100px 0 0 920px;
 }
-.slot{
+.images{
     text-align:center;
     width: 200px;
     height:200px;
@@ -52,27 +53,17 @@ h1{
 .button-container{
     display:flex;
     justify-content:space-around;
-    margin:200px 0 0 800px;
+    margin:150px 0 0 990px;
 }
-.bet-one{
+.bet{
     font-size: 20px;
     width: 100px;
     height: 75px;
     border: 5px solid grey;
+    margin:0 70px 0 0;
 }
-.bet-five{
-    font-size: 20px;
-    width: 100px;
-    height: 75px;
-    border: 5px solid grey;
 
-}.bet-ten{
-    font-size: 20px;
-    width: 100px;
-    height: 75px;
-    border: 5px solid grey;
-
-}
 .images{
     width:100%;
+
 }
