@@ -1,0 +1,78 @@
+body {
+    display:grid;
+    font-family: Helvetica;
+    /* height: 100vh; */
+    /* grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 30px; */
+    gap: 5px;
+
+    background-image: url("https://t4.ftcdn.net/jpg/04/73/73/41/360_F_473734149_4v6ND4mW9557PR0q0fmF9xESXQz9y4DP.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1{
+    text-align: center;
+    margin: 0 0 0 700px;
+    color:white;
+    font-size: 80px;
+}
+
+.main-container{
+    border: 1px solid black;
+    /* height: 700px;
+    width: 900px; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.coins{
+    text-align: right;
+    margin: 75px 0 0 0;
+    padding: 0 200px 0 0;
+    font-size: 20px;
+    color: gold;
+}
+.slot-containers{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    margin: 100px 0 0 920px;
+}
+.slot{
+    text-align:center;
+    width: 200px;
+    height:200px;
+    border: 5px solid red;
+    color:white;
+
+}
+.button-container{
+    display:flex;
+    justify-content:space-around;
+    margin:200px 0 0 800px;
+}
+.bet-one{
+    font-size: 20px;
+    width: 100px;
+    height: 75px;
+    border: 5px solid grey;
+}
+.bet-five{
+    font-size: 20px;
+    width: 100px;
+    height: 75px;
+    border: 5px solid grey;
+
+}.bet-ten{
+    font-size: 20px;
+    width: 100px;
+    height: 75px;
+    border: 5px solid grey;
+
+}
+.images{
+    width:100%;
+}
