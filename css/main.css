@@ -1,78 +1,84 @@
 body {
-    display:grid;
-    font-family: Helvetica;
     /* height: 100vh; */
     /* grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 30px; */
-    gap: 5px;
-
-    background-image: url("https://t4.ftcdn.net/jpg/04/73/73/41/360_F_473734149_4v6ND4mW9557PR0q0fmF9xESXQz9y4DP.jpg");
+    background-image: url("https://thumbs.dreamstime.com/b/neon-slot-machine-playing-cards-wins-jackpot-vector-illustration-148159444.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: fit-content;
-    
+    width: 100%;
 }
 
 h1{
-    text-align: right;
-    margin: 0 100px 0 0;
+    text-align: center;
+    margin: auto;
+    margin-top: 20;
     color:white;
     font-size: 80px;
+    background-color: black;
+    padding: 10px;
+    width: 800px;
+    border-radius: 10px;
+    border: 3px solid white;
 }
 
-.main-container{
-    border: 1px solid black;
-    /* height: 700px;
-    width: 900px; */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-.coins{
-    text-align: right;
-    margin: 75px 0 0 0;
-    padding: 0 50px 0 0;
-    font-size: 25px;
-    color: gold;
+.main-body{
+    width: 100%;
+    height: 70vh;
 }
 .slot-containers{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
-    margin: 100px 0 0 920px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.images{
+
+.coins{
     text-align:center;
-    width: 200px;
-    height:200px;
-    border: 5px solid red;
+    font-size: 45px;
     color:white;
+    margin-top: 40px;
 
 }
 .button-container{
-    display:flex;
-    justify-content:space-around;
-    margin:150px 0 0 990px;
+    display: flex;
+    justify-content: center;
+
 }
 .bet{
-    font-size: 20px;
     width: 100px;
-    height: 75px;
-    border: 5px solid grey;
-    margin:0 70px 0 0;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin: 0 20px 20px 20px;
 }
 
 .images{
-    width:100%;
+    width: 200px;
+    height: 200px;
+    margin: 2px;
 
 }
 
-.fade-animation{
-    animation: fadeIn 5s;
+.slot-back{
+    margin-left: 5px;
+    margin-top: 50px;
+    background: linear-gradient(0deg, rgb(104, 27, 127) 40%, rgb(240, 130, 5) 97%);
+    height: 380px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0;}
-    100% {opacity: 1;}
+@media (max-width:1300px){
+    body{
+        background-color: rgb(37, 18, 51);
+        background-image:none;
+    }
+    
+    
 }

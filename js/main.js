@@ -15,7 +15,6 @@ const slot1 = document.getElementById('slot-one')
 const slot2 = document.getElementById('slot-two')
 const slot3 = document.getElementById('slot-three')
 
-const total = document.getElementById('total-coins')
 const h1El = document.querySelector('h1')
 const coinsCh = document.querySelector('.coins')
 
@@ -97,14 +96,14 @@ function randNum() {
 //     }
 //     setTimeout(function(){ slot3.src = urlOpt[thirdSlot]}, 2400);
 // }
-function randomize (slot, time, customAnimation) {
-    setTimeout(slot.src=urlOpt[Math.floor(Math.random()*3)], time)
-    slot.classList.add(customAnimation)
-}
+// function randomize (slot, time, customAnimation) {
+//     setTimeout(slot.src=urlOpt[Math.floor(Math.random()*3)], time)
+//     slot.classList.add(customAnimation)
+// }
 
-function removeAnimation (){
-    slot3.classList.remove('fade-animation')
-}
+// function removeAnimation (){
+//     slot3.classList.remove('fade-animation')
+// }
 function slotMv(){
     // randomize(slot1, 300)
     // randomize(slot1, 600)
@@ -184,7 +183,7 @@ btn2.addEventListener('click', function () {
 
         if ((firstSlot === secondSlot) && (firstSlot === thirdSlot)) {
             coinsEl = coinsEl + 15;
-            h1El.innerHTML = "You win 15 coins"
+            setTimeout(function(){h1El.innerHTML = "You win 15 coins"},1700);
         }
         else {
             coinsEl = coinsEl - 5;
@@ -211,7 +210,7 @@ btn3.addEventListener('click', function () {
         // slot3.src = urlOpt[thirdSlot]
         if ((firstSlot === secondSlot) && (firstSlot === thirdSlot)) {
             coinsEl = coinsEl + 30;
-            h1El.innerHTML = "You win 30 coins"
+            setTimeout(function(){h1El.innerHTML = "You win 30 coins"},1700);
         } else {
             coinsEl = coinsEl - 10;
             h1El.innerHTML = "Slot Machine"
