@@ -1,7 +1,10 @@
 const urlOpt =
-    ["https://media.istockphoto.com/id/1183790559/vector/vector-red-heart-shape-emoticon-on-background.jpg?s=612x612&w=0&k=20&c=Ihona-SCSfCCQ5C1dc7f55lDzIs3J1j6advpSI8uAeE=",
+    [
+        "https://img.freepik.com/premium-photo/one-thousand-3d-illustration-golden-number-1-000-white-copy-space-right-hand-side-text_131956-45.jpg",
+        "https://media.istockphoto.com/id/1183790559/vector/vector-red-heart-shape-emoticon-on-background.jpg?s=612x612&w=0&k=20&c=Ihona-SCSfCCQ5C1dc7f55lDzIs3J1j6advpSI8uAeE=",
         "https://png.pngtree.com/png-clipart/20220124/ourlarge/pngtree-hand-drawn-vector-cartoon-cherry-png-image_4270506.png",
-        "https://ih1.redbubble.net/image.1930763322.7413/st,small,507x507-pad,600x600,f8f8f8.jpg"
+        "https://ih1.redbubble.net/image.1930763322.7413/st,small,507x507-pad,600x600,f8f8f8.jpg",
+        // "https://img.freepik.com/premium-vector/golden-coins-set-flat-gold-icon-economy-finance-money-concept-wealth-symbol-vector-illustration-isol_144920-932.jpg?w=2000"
     ]
 let firstSlot = null;
 let secondSlot = null;
@@ -23,9 +26,9 @@ let timeStart =0;
 
 // /////////////////////////////////////////////////
 function randNum() {
-    firstSlot = Math.floor(Math.random() * 3)
-    secondSlot = Math.floor(Math.random() * 3)
-    thirdSlot = Math.floor(Math.random() * 3)
+    firstSlot = Math.floor(Math.random() * urlOpt.length)
+    secondSlot = Math.floor(Math.random() * urlOpt.length)
+    thirdSlot = Math.floor(Math.random() * urlOpt.length)
 
     console.log(firstSlot)
     console.log(secondSlot)
@@ -108,9 +111,9 @@ function slotMv(){
     // randomize(slot1, 300)
     // randomize(slot1, 600)
     // randomize(slot1, 1100)
-    setTimeout(function(){ slot1.src=urlOpt[Math.floor(Math.random()*3)]}, 300);
-    setTimeout(function(){ slot1.src=urlOpt[Math.floor(Math.random()*3)]}, 600);
-    setTimeout(function(){ slot1.src=urlOpt[Math.floor(Math.random()*3)]}, 1100);
+    setTimeout(function(){ slot1.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 300);
+    setTimeout(function(){ slot1.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 600);
+    setTimeout(function(){ slot1.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 1100);
     setTimeout(function(){ slot1.src = urlOpt[firstSlot]}, 1200);        
 
         
@@ -118,10 +121,10 @@ function slotMv(){
     // randomize(slot2, 600)
     // randomize(slot2, 900)
     // randomize(slot2, 1400)
-    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*3)]}, 300);
-    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*3)]}, 600);
-    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*3)]}, 900);
-    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*3)]}, 1400);
+    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 300);
+    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 600);
+    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 900);
+    setTimeout(function(){ slot2.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 1400);
     setTimeout(function(){ slot2.src = urlOpt[secondSlot]}, 1500);
 
     // randomize(slot3, 300)
@@ -131,11 +134,11 @@ function slotMv(){
     // randomize(slot3, 1500, 'fade-animation')
     // removeAnimation()
     
-    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*3)]}, 300);
-    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*3)]}, 600);
-    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*3)]}, 900);
-    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*3)]}, 1200);
-    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*3)]}, 1500);
+    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 300);
+    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 600);
+    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 900);
+    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 1200);
+    setTimeout(function(){ slot3.src=urlOpt[Math.floor(Math.random()*urlOpt.length)]}, 1500);
     setTimeout(function(){ slot3.src = urlOpt[thirdSlot]}, 1700);
 
     // slot3.classList.remove('fade-animation')
@@ -153,9 +156,21 @@ btn1.addEventListener('click', function () {
         // slotMv3();
 
         if ((firstSlot === secondSlot) && (firstSlot === thirdSlot)) {
-            coinsEl = coinsEl + 3;
-            setTimeout(function(){h1El.innerHTML = "You win 3 coins"},1700);
+            if(firstSlot===0){
+                coinsEl = coinsEl + 1000;
+                setTimeout(function(){h1El.innerHTML = "Jackpot!!!"},1700);
+
+            }
+            
+            else{
+                coinsEl = coinsEl + 3;
+                setTimeout(function(){h1El.innerHTML = "You win 3 coins"},1700);
+            }
         }
+
+
+
+        ///////////////////////////////
         else {
             coinsEl = coinsEl - 1;
             h1El.innerHTML = "Slot Machine"
