@@ -29,4 +29,4 @@ Access:  https://jeannette130204.github.io/first-project/
 - Adjusting the CSS to different designs and backgrounds.
 
 ## Unresolved problems: 
-- Making last image in the slots to fade in after the image changes.
+- Making last image in the slots fade in after the image changes.
