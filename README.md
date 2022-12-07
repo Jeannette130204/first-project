@@ -24,9 +24,10 @@ Access:  https://jeannette130204.github.io/first-project/
 ## WireFrame:
 ![](./WireFrame.png)
 
-## Obstacles:
+## Icebox/completed:
 - Finding a way for the images to change various times before the final image.
 - Adjusting the CSS to different designs and backgrounds.
 
-## Unresolved problems: 
+## Icebox: 
 - Making last image in the slots fade in after the image changes.
+- Add extra effects to the images.
