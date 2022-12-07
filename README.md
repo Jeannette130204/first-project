@@ -21,7 +21,7 @@ Access:  https://jeannette130204.github.io/first-project/
 - As a player, I want a jackpot option that will give many coins.
 - As a player, I want to know when I do not have enough money to keep betting.
 
-## WireFrame:
+## Wireframe:
 ![](./WireFrame.png)
 
 ## Icebox/completed:
